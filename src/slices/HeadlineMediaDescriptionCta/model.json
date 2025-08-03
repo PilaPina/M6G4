@@ -1,0 +1,52 @@
+{
+  "type": "SharedSlice",
+  "id": "headline_media_description_cta",
+  "name": "HeadlineMediaDescriptionCta",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard layout with media, eyebrow, headline, description, and CTA button.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "media": {
+          "type": "Image",
+          "config": {
+            "label": "Media"
+          }
+        },
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "Call to Action",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--background);
+}
+
+.nav { width: 100%; }
+
+.inner {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand { display: inline-flex; align-items: center; }
+.brandIcon {
+  display: inline-block;
+}
+
+/* Accessible hamburger */
+.menuBtn {
+  display: inline-flex;
+  background: none;
+  border: 0;
+  padding: 0.25rem;
+  margin-left: auto;       
+  cursor: pointer;
+}
+.menuIcon {
+  width: 24px; height: 2px; background: currentColor; display: block; position: relative;
+}
+.menuIcon::before, .menuIcon::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 2px; background: currentColor;
+}
+.menuIcon::before { top: -6px; }
+.menuIcon::after { top: 6px; }
+
+.srOnly {
+  position: absolute !important; height: 1px; width: 1px; overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+}
+
+.right {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 1rem;                 /* anchor to the right on desktop */
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--background);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  padding: 0.75rem;
+  z-index: 100;
+}
+.open { display: flex; }    
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.5rem 0.25rem;     /* bigger touch targets */
+  transition: opacity .2s;
+}
+.link:hover { opacity: .75; }
+
+/* Mobile: make panel full-width with gutters */
+@media (max-width: 680px) {
+  .right {
+    left: 1rem;
+    right: 1rem;
+  }
+}
