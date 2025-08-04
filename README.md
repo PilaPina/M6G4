@@ -13,13 +13,17 @@ Slices and dynamic content blocks are managed with Prismic Slices and rendered u
 Styling is a mix of global CSS for base styles and CSS modules for page/component-specific styles.
 
 Images and static assets are placed in the public/ directory and referenced with root-relative paths (e.g. /logo.svg).
-All images are creative commons, except for logo which is my own design. 
+All images fetched through Prismic library, except for the logo which is my own design. 
 
 This structure allows for:
+- Easy addition of new pages and components.
+- Clean separation of concerns between layout, content, and presentation.
+- Flexible content modeling and editing via Prismic.
 
-Easy addition of new pages and components.
-Clean separation of concerns between layout, content, and presentation.
-Flexible content modeling and editing via Prismic.
+For the purpose of this project I created a fictional blogsite for a professional diver. 
+
+![Landing page for Diver journal site](ScreenshotLanding.png) 
+
 
 ## Project Structure
 
