@@ -1,17 +1,19 @@
+
 .header {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   background: var(--background);
+  width: 100%;
 }
-
-.nav { width: 100%; }
 
 .inner {
   position: relative;
   margin: 0;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -22,7 +24,6 @@
   display: inline-block;
 }
 
-/* Accessible hamburger */
 .menuBtn {
   display: inline-flex;
   background: none;
@@ -32,13 +33,22 @@
   cursor: pointer;
 }
 .menuIcon {
-  width: 24px; height: 2px; background: currentColor; display: block; position: relative;
+  width: 32px; 
+  height: 4px; 
+  background: currentColor; 
+  display: block; 
+  position: relative;
 }
 .menuIcon::before, .menuIcon::after {
-  content: ""; position: absolute; left: 0; right: 0; height: 2px; background: currentColor;
+  content: ""; 
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  height: 4px; 
+  background: currentColor;
 }
-.menuIcon::before { top: -6px; }
-.menuIcon::after { top: 6px; }
+.menuIcon::before { top: -8px; }
+.menuIcon::after { top: 8px; }
 
 .srOnly {
   position: absolute !important; height: 1px; width: 1px; overflow: hidden;
@@ -47,16 +57,16 @@
 
 .right {
   position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 1rem;                 /* anchor to the right on desktop */
+  top: calc(100% + 0rem);
+  right: 0rem; 
   display: none;
   flex-direction: column;
   gap: 0.5rem;
   background: var(--background);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 0.75rem;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-  padding: 0.75rem;
+  border: 1px solid rgba(52, 52, 52, 0.08);
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 24px rgba(18, 6, 45, 0.08);
+  padding: 1rem;
   z-index: 100;
 }
 .open { display: flex; }    
@@ -65,16 +75,8 @@
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  font-size: 16px;
-  padding: 0.5rem 0.25rem;     /* bigger touch targets */
+  font-size: 20px;
+  padding: 0.5rem;
   transition: opacity .2s;
 }
 .link:hover { opacity: .75; }
-
-/* Mobile: make panel full-width with gutters */
-@media (max-width: 680px) {
-  .right {
-    left: 1rem;
-    right: 1rem;
-  }
-}

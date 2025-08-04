@@ -12,7 +12,7 @@ export default async function ArticlesPage() {
 
   return (
     <main>
-      <div className={styles.articlesMain}>
+      <div className={styles.articlesContainer}>
       <h1 className={styles.articlesTitle}>Journal entries</h1>
       <ul className={styles.articlesList}>
         {posts.map((post) => (

@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,50 +9,52 @@ export default function NavBar() {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav} aria-label="Primary">
-        <div className={styles.inner}>
-          <Link href="/" className={styles.brand} aria-label="Home">
-            <Image
-              src="/logo.svg"
-              alt="Site logo"
-              className={styles.brandIcon}
-              width={32}
-              height={32}
-              priority
-            />
-          </Link>
-
-          <button
-            type="button"
-            className={styles.menuBtn}
-            aria-expanded={open}
-            aria-controls="primary-nav"
-            onClick={() => setOpen(!open)}
-          >
-            <span className={styles.menuIcon} aria-hidden />
-          </button>
-
-          <div
-            id="primary-nav"
-            className={`${styles.right} ${open ? styles.open : ""}`}
-          >
-            <Link
-              href="/articles"
-              className={styles.link}
-              onClick={() => setOpen(false)}
-            >
-              Journal
+      <div className="container">
+        <nav className={styles.nav} aria-label="Primary">
+          <div className={styles.inner}>
+            <Link href="/" className={styles.brand} aria-label="Home">
+              <Image
+                src="/logo.svg"
+                alt="Site logo"
+                className={styles.brandIcon}
+                width={40}
+                height={40}
+                priority
+              />
             </Link>
-            <Link
-              href="/about"
-              className={styles.link}
-              onClick={() => setOpen(false)}
+
+            <button
+              type="button"
+              className={styles.menuBtn}
+              aria-expanded={open}
+              aria-controls="primary-nav"
+              onClick={() => setOpen(!open)}
             >
-              About
-            </Link>
+              <span className={styles.menuIcon} aria-hidden />
+            </button>
+
+            <div
+              id="primary-nav"
+              className={`${styles.right} ${open ? styles.open : ""}`}
+            >
+              <Link
+                href="/articles"
+                className={styles.link}
+                onClick={() => setOpen(false)}
+              >
+                Journal
+              </Link>
+              <Link
+                href="/about"
+                className={styles.link}
+                onClick={() => setOpen(false)}
+              >
+                About
+              </Link>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }

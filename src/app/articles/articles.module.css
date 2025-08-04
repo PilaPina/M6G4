@@ -1,14 +1,13 @@
-.articlesMain {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-radius: 1rem;
+.articlesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .articlesTitle {
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin-bottom: 2rem;
   text-align: center;
+  color: #0c2820;
 }
 
 .articlesList {
@@ -18,26 +17,32 @@
 }
 
 .articlesItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  background: #1056621d;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.6rem;
+  background: #10566261;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.articlesItemLink {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .articlesContent {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  flex: 1;
+  width: 100%;
+  padding: 0.8rem;
 }
 
 .articlesItemImage img {
-  width: 180px;
-  height: 120px;
+  width: 400px;
+  height: 200px;
   object-fit: cover;
   border-radius: 0.75rem;
 }
@@ -45,47 +50,61 @@
 .articlesText {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .articlesItemTitle {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   color: #1a5745;
 }
 
 .articlesItemDesc {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #444;
 }
 
 .articlesItemDate {
-  font-size: 0.95rem;
-  color: #656565;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #061410;
 }
 
  @media (max-width: 900px) {
-    .articlesTitle {
-      font-size: 1.2rem;
-    }
-    .articlesItem {
-      flex-direction: column;
-      align-items: center;
-    }
-    .articlesContent {
-      flex-direction: column;
-      align-items: center;
-    }
-    .articlesItemImage img {
-      width: 100%;
-      height: auto;
-    }
-    .articlesMain {
-      padding: 2rem;
-      padding-top: 2rem;
-    }
-    .articlesTitle {
-      font-size: 2rem;
-    }
+  .articlesContainer {
+    padding: 0 1rem;
+  }
+  .articlesTitle {
+    font-size: 1.2rem;
+  }
+  .articlesItem {
+    flex-direction: column;
+    align-items: center;
+  }
+  .articlesItemTitle {
+    font-size: 1.5rem;
+  }
+  .articlesItemDate {
+    font-size: 1rem;
+  }
+  .articlesContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0.6rem;
+    padding-top: 0.8rem;
+  }
+  .articlesItemDesc {
+    font-size: 1rem;   
+  }
+  .articlesItemImage img {
+    width: 100%;
+    height: 200px;
+  }
+  .articlesMain {
+    padding: 1rem;
+    padding-top: 1rem;
+  }
 }

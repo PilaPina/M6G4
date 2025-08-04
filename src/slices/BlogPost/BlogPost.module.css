@@ -1,99 +1,101 @@
 .blogPost {
-              font-family: system-ui, sans-serif;
-              background: #fff;
-              color: #222222;
-              margin: 30px auto;
-              max-width: 1000px;   
-              display: flex;
-              flex-direction: column;
-              gap: 2rem;
-          }
+    font-family: system-ui, sans-serif;
+    background: #fff;
+    color: #222222;
+    margin: 60px auto;
+    max-width: 1200px;   
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-          .imageWrapper {
-              position: relative;
-              width: auto;
-              height: 600px;
-              object-fit: cover;
-              overflow: hidden;
-          }
+.imageWrapper {
+    position: relative;
+    width: auto;
+    height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 1rem;
+}
 
-          .blogPostImage {
-              display: block;
-              object-fit: cover;
-          }
+.blogPostImage {
+    display: block;
+    object-fit: cover;
+}
 
-          .overlay {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              padding: 1.2rem;
-              z-index: 2;
-              background: rgba(255, 255, 255, 0.3); 
-              backdrop-filter: blur(12px);
-          }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(12px);
+}
 
-          .blogPostTitle {
-              font-size: 2rem;
-              color: #222222;
-              margin-bottom: 0.5rem;
-              font-weight: bold;
-          }
+.blogPostTitle {
+    font-size: 2rem;
+    color: #222222;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
 
-          .blogPostDate {
-              font-size: 1.2rem;
-              color: #323232;
-              margin-bottom: 0.5rem;
-          }
+.blogPostDate {
+    font-size: 1.2rem;
+    color: #323232;
+    margin-bottom: 0.5rem;
+}
 
-          .blogPostContent {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              flex: 1;
-              max-width: 600px;
-          }
+.blogPostContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    max-width: 600px;
+}
 
-          .blogPostDescription {
-              font-size: 1.15rem;
-              line-height: 1.75rem;
-              margin-bottom: 1.5rem;
-              color: #444;
-          }
+.blogPostDescription {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
 
-          .blogPostButton {
-                display: inline-block;
-                color: #4e007b;
-                border-radius: 0.25rem;
-                text-decoration: none;
-                font-weight: 500;
-                transition: background 0.2s;
-         }
+.blogPostButton {
+      display: inline-block;
+      color: #4e007b;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+}
 
-          .blogPostButton:hover {
-              color: #007b1d;
-          }
+.blogPostButton:hover {
+    color: #007b1d;
+}
 
-          @media (max-width: 900px) {
-            .imageWrapper {
-              width: 100%;
-              height: 300px;
-            }
-            .blogPostImage {
-              width: 100%;
-              height: 100%;
-            }
-            .overlay {
-              padding: 0.8rem;
-              backdrop-filter: blur(4px);
-            }
-            .blogPostTitle {
-              font-size: 1.5rem;
-            }
-            .blogPost {
-                max-width: 100%;
-                padding: 1rem;
-            }
-            
-          }
+@media (max-width: 900px) {
+  .imageWrapper {
+    width: 100%;
+    height: 400px;
+  }
+  .blogPostImage {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay {
+    padding: 0.8rem;
+    backdrop-filter: blur(4px);
+  }
+  .blogPostTitle {
+    font-size: 1.5rem;
+  }
+  .blogPost {
+      max-width: 100%;
+      padding: 1rem;
+      margin: 0 auto;
+  }
+  
+}
 
