@@ -4,14 +4,17 @@ import { notFound } from "next/navigation";
 import { SliceZone } from "@prismicio/react";
 import { components } from "@/slices";
 
-export default async function ArticlePage({
-  params,
-}: {
+type ArticlePageProps = {
   params: { uid: string };
-}) {
+};
+
+export default async function ArticlePage({
+  params
+}: ArticlePageProps) {
+  const { uid } = await params; // Extract the uid from params and await promise. 
   const client = createClient();
   const article = await client
-    .getByUID("blogpost", params.uid)
+    .getByUID("blogpost", uid)
     .catch(() => null);
   if (!article) return notFound();
 
