@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import styles from "./navBar.module.css";
+import styles from "./NavBar.module.css";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
