@@ -1,10 +1,11 @@
 // Articles list page
-import { client } from "@/prismicio";
+import { createClient } from "@/prismicio";
 import React from "react";
 import Link from "next/link";
 import styles from "./articles.module.css";
 
 export default async function ArticlesPage() {
+  const client = createClient();
   const posts = await client.getAllByType("blogpost", {
     orderings: [{ field: "my.blogpost.meta_date", direction: "desc" }],
   });

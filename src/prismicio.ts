@@ -13,26 +13,21 @@ export const repositoryName =
  *
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
-// TODO: Update the routes array to match your project's route structure.
-const routes = [
-  // Examples:
-  // { type: "homepage", path: "/" },
-  // { type: "page", path: "/:uid" },
+export const routes: prismic.ClientConfig["routes"] = [
   { type: "homepage", path: "/" },
   { type: "blogpost", path: "/articles/:uid" },
   { type: "about", path: "/about" },
 ];
 
-/**
- * Creates a Prismic client for the project's repository. The client is used to
- * query content from the Prismic API.
- *
- * @param config - Configuration for the Prismic client.
- */
-export const client = prismic.createClient(repositoryName, {
-  accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-});
+export function createClient(config: prismic.ClientConfig = {}) {
+  const client = prismic.createClient(repositoryName, {
+    accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+    routes,
+    ...config,
+  });
 
-export function enablePrismicAutoPreviews() {
+  // App Router preview wiring
   enableAutoPreviews({ client });
+
+  return client;
 }

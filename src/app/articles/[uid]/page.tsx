@@ -1,5 +1,5 @@
 // Article detail page
-import { client } from "@/prismicio";
+import { createClient } from "@/prismicio";
 import { notFound } from "next/navigation";
 import { SliceZone } from "@prismicio/react";
 import { components } from "@/slices";
@@ -9,6 +9,7 @@ export default async function ArticlePage({
 }: {
   params: { uid: string };
 }) {
+  const client = createClient();
   const article = await client
     .getByUID("blogpost", params.uid)
     .catch(() => null);
